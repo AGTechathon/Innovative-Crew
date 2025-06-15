@@ -24,6 +24,7 @@ DevOps	GitHub Actions, Firebase CLI
 
 🧩 Core Modules
 👷 Worker Management
+
 Register workers, assign roles & shifts
 
 Track attendance & performance
@@ -31,6 +32,7 @@ Track attendance & performance
 Performance score based on output & quality
 
 📦 Order Management
+
 Create and track production orders
 
 Assign orders to workers/machines
@@ -38,6 +40,7 @@ Assign orders to workers/machines
 Real-time status updates (Pending, In-Progress, Complete)
 
 🏪 Inventory System
+
 Manage raw material and finished goods
 
 Real-time stock updates
@@ -45,6 +48,7 @@ Real-time stock updates
 Automatic low-stock alerts and reorder triggers
 
 📊 Efficiency Dashboard
+
 Track production speed, error rates, downtime
 
 View per-worker, per-order, or factory-wide efficiency
