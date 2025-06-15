@@ -1,44 +1,95 @@
+📌 Overview
+Factory Management System (FMS) is a web-based tool designed to help factories track and manage their resources effectively. It centralizes:
 
-🏭 Factory Management Web Application
+🧍‍♂️ Worker Data & Performance
 
-A modern, real-time factory management system built using JavaScript for the frontend and Firebase for the backend. The application helps manufacturing units streamline operations such as employee attendance, work orders, inventory tracking, and production status — all in one intuitive dashboard.
+📦 Order Management & Fulfillment
 
+🧰 Inventory Levels & Movements
 
+📈 Operational Efficiency Insights
 
-🚀 Features
+Unlike traditional ERPs, this platform leverages real-time sync, cloud scalability, and a modern tech stack to deliver a fast, responsive, and intelligent user experience.
 
-- ✅ Employee Attendance Management
-  - Record employee check-in and check-out
-  - Real-time status display of active workers
+⚙️ Tech Stack
+Layer	Tech Used
+Frontend	React, TypeScript, TailwindCSS
+Backend	Node.js (for custom APIs and integrations)
+Auth	Firebase Authentication
+Database	Firebase Firestore (Realtime NoSQL)
+Hosting	Firebase Hosting
+Functions	Firebase Cloud Functions (TypeScript)
+Storage	Firebase Storage (documents, logs, images)
+DevOps	GitHub Actions, Firebase CLI
 
-- 📝 Work Order Tracking
-  - Create, assign, and track work orders
-  - Status updates: Pending, In Progress, Completed
+🧩 Core Modules
+👷 Worker Management
+Register workers, assign roles & shifts
 
-- 📦 Inventory Management
-  - Add and manage raw materials, tools, and finished goods
-  - View current stock levels and categorize items
+Track attendance & performance
 
-- 📊 Production Monitoring
-  - Track production output and progress in real-time
-  - Automatically update statuses on completion
+Performance score based on output & quality
 
-- 🔐 Authentication & Role-Based Access
-  - Secure login using Firebase Authentication
-  - Admin and user access controls
+📦 Order Management
+Create and track production orders
 
-- 📱 Responsive UI
-  - Mobile-friendly design using HTML, CSS, and JavaScript
-  - Easy navigation with intuitive layout
+Assign orders to workers/machines
 
+Real-time status updates (Pending, In-Progress, Complete)
 
+🏪 Inventory System
+Manage raw material and finished goods
 
-## 🔧 Tech Stack
+Real-time stock updates
 
- Tech            | Description                          
- JavaScript      | Frontend logic and interactivity     
- HTML/CSS        | User interface and layout            
- Firebase        | Backend services (Auth, Firestore DB, Hosting) 
- Firestore       | Real-time NoSQL database             
- Firebase Auth   | Secure user login and roles       
+Automatic low-stock alerts and reorder triggers
+
+📊 Efficiency Dashboard
+Track production speed, error rates, downtime
+
+View per-worker, per-order, or factory-wide efficiency
+
+Export reports to PDF or CSV
+
+🧠 How We’re Different
+Feature	FMS (Our Website)	Traditional ERP
+💡 Real-time data sync	✅ Firestore + Listeners	❌ Refresh required or delayed
+🧪 Type-safe development	✅ Full TypeScript stack	❌ Often PHP/Java-based
+🔄 Serverless, scalable backend	✅ Firebase Cloud Functions	❌ On-premise, hard to scale
+🎯 Focused on efficiency metrics	✅ Live dashboard + analysis	❌ Basic reports
+📱 Mobile-friendly interface	✅ PWA with offline support	⚠️ Not mobile-optimized
+🔐 Fine-grained role permissions	✅ Firebase Auth + Claims	⚠️ Limited role control
+
+📈 System Architecture Diagram
+plaintext
+Copy
+Edit
+         ┌─────────────────────────────────────────────┐
+         │               Admin/Manager UI              │
+         │     React + TypeScript + TailwindCSS        │
+         └──────────────────────┬──────────────────────┘
+                                │
+                                ▼
+                  ┌────────────────────────────┐
+                  │  Firebase Authentication   │
+                  │   Email/Password, Google   │
+                  └────────────┬───────────────┘
+                               │
+   ┌───────────────────────────┼────────────────────────────┐
+   ▼                           ▼                            ▼
+Worker Info Module      Orders Module               Inventory Module
+(Firestore: /workers)   (Firestore: /orders)         (Firestore: /inventory)
+
+   ┌───────────────────────────┼────────────────────────────┐
+   ▼                           ▼                            ▼
+Dashboard & Efficiency Logs   Firebase Storage         Cloud Functions (TS)
+(Firestore: /efficiency)      (/reports, /logs)        - Auto-reorder
+                                                       - Trigger alerts
+                                                       - Export summaries
+🔐 Role-Based Access (RBAC)
+Role	Permissions
+Admin	Full access to all modules, add/remove users, manage settings
+Manager	View/edit orders, assign workers, monitor inventory
+Worker	View assigned tasks, submit logs, update status
+Auditor	Read-only access to all modules (for quality control or external reviewers)     
 
