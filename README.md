@@ -68,28 +68,6 @@ Feature	FMS (Our Website)	Traditional ERP
 plaintext
 Copy
 Edit
-         ┌─────────────────────────────────────────────┐
-         │               Admin/Manager UI              │
-         │     React + TypeScript + TailwindCSS        │
-         └──────────────────────┬──────────────────────┘
-                                │
-                                ▼
-                  ┌────────────────────────────┐
-                  │  Firebase Authentication   │
-                  │   Email/Password, Google   │
-                  └────────────┬───────────────┘
-                               │
-   ┌───────────────────────────┼────────────────────────────┐
-   ▼                           ▼                            ▼
-Worker Info Module      Orders Module               Inventory Module
-(Firestore: /workers)   (Firestore: /orders)         (Firestore: /inventory)
-
-   ┌───────────────────────────┼────────────────────────────┐
-   ▼                           ▼                            ▼
-Dashboard & Efficiency Logs   Firebase Storage         Cloud Functions (TS)
-(Firestore: /efficiency)      (/reports, /logs)        - Auto-reorder
-                                                       - Trigger alerts
-                                                       - Export summaries
 🔐 Role-Based Access (RBAC)
 Role	Permissions
 Admin	Full access to all modules, add/remove users, manage settings
